@@ -3,217 +3,125 @@
 [Introduction](./README.md)
 
 - [FAQ](./faq.md)
-
-# Backend
-
-- [Communications Stack](./backend/communications-stack.md)
-
-# Backend / Bridges
-
-- [Bridges](./backend/bridges/README.md)
-- [Rubic Bridge](./backend/bridges/rubic-bridge.md)
-
-# Backend / Consensus-Mechanism
-
-- [Consensus Mechanism](./backend/consensus-mechanism/README.md)
-- [Addressing Potential Criticisms](./backend/consensus-mechanism/addressing-potential-criticisms.md)
-- [Comparative Advantage](./backend/consensus-mechanism/comparative-advantage.md)
-- [Conclusion](./backend/consensus-mechanism/conclusion.md)
-- [Decentralization in PoR-BFT](./backend/consensus-mechanism/decentralization-in-por-bft.md)
-- [Enhanced Security](./backend/consensus-mechanism/enhanced-security.md)
-- [Unparalleled Scalability](./backend/consensus-mechanism/unparalleled-scalability.md)
-
-# Backend / Developers-Testbed
-
-- [Developers Testbed](./backend/developers-testbed/README.md)
-- [Installing dependencies](./backend/developers-testbed/installing-dependencies.md)
-- [Node Configuration](./backend/developers-testbed/node-configuration.md)
-- [Running the node](./backend/developers-testbed/running-the-node.md)
-- [Setting up the environment](./backend/developers-testbed/setting-up-the-environment.md)
-- [Setting up the repository](./backend/developers-testbed/setting-up-the-repository.md)
-
-# Backend / Global-Change-Registry
-
-- [Global Change Registry](./backend/global-change-registry/README.md)
-- [GCR Structure](./backend/global-change-registry/gcr-structure.md)
-- [How is GCR Synced?](./backend/global-change-registry/how-is-gcr-synced.md)
-
-# Backend / Internal-Mechanisms
-
-- [Internal Mechanisms](./backend/internal-mechanisms/README.md)
-- [Cross Context Identities](./backend/internal-mechanisms/cross-context-identities.md)
-- [Network Time Synchronization](./backend/internal-mechanisms/network-time-synchronization.md)
-
-# Backend / L2Ps-Subnet-Framework
-
-- [L2PS (Subnet) Framework](./backend/l2ps-subnet-framework/README.md)
-- [How are L2PS transactions handled?](./backend/l2ps-subnet-framework/how-are-l2ps-transactions-handled.md)
-
-# Backend / Mcp-Server
-
-- [MCP Server](./backend/mcp-server/README.md)
-- [Architecture](./backend/mcp-server/architecture.md)
-- [Available Tools](./backend/mcp-server/available-tools.md)
-- [Client Usage](./backend/mcp-server/client-usage.md)
-- [Configuration](./backend/mcp-server/configuration.md)
-- [Monitoring Endpoint](./backend/mcp-server/monitoring-endpoint.md)
-- [Overview](./backend/mcp-server/overview.md)
-- [Troubleshooting](./backend/mcp-server/troubleshooting.md)
-
-# Backend / Miscellaneous
-
-- [Miscellaneous](./backend/miscellaneous/README.md)
-- [Backing up and restoring a node](./backend/miscellaneous/backing-up-and-restoring-a-node.md)
-- [Browsing the Postgres DB via psql](./backend/miscellaneous/browsing-the-postgres-db-via-psql.md)
-- [Joining the testnet using a custom genesis](./backend/miscellaneous/joining-the-testnet-using-a-custom-genesis.md)
-
-# Backend / Storage-Programs
-
-- [Storage Programs Overview](./backend/storage-programs/README.md)
-- [Access Control Guide](./backend/storage-programs/access-control.md)
-- [Storage Programs API Reference](./backend/storage-programs/api-reference.md)
-- [Storage Programs Examples](./backend/storage-programs/examples.md)
-- [Getting Started with Storage Programs](./backend/storage-programs/getting-started.md)
-- [Storage Program Operations](./backend/storage-programs/operations.md)
-- [RPC Queries Guide](./backend/storage-programs/rpc-queries.md)
-
-# Cookbook
-
+- Backend
+    - [Communications Stack](./backend/communications-stack.md)
+    - [Bridges](./backend/bridges/README.md)
+        - [Rubic Bridge](./backend/bridges/rubic-bridge.md)
+    - [Consensus Mechanism](./backend/consensus-mechanism/README.md)
+        - [Addressing Potential Criticisms](./backend/consensus-mechanism/addressing-potential-criticisms.md)
+        - [Comparative Advantage](./backend/consensus-mechanism/comparative-advantage.md)
+        - [Conclusion](./backend/consensus-mechanism/conclusion.md)
+        - [Decentralization in PoR-BFT](./backend/consensus-mechanism/decentralization-in-por-bft.md)
+        - [Enhanced Security](./backend/consensus-mechanism/enhanced-security.md)
+        - [Unparalleled Scalability](./backend/consensus-mechanism/unparalleled-scalability.md)
+    - [Developers Testbed](./backend/developers-testbed/README.md)
+        - [Installing dependencies](./backend/developers-testbed/installing-dependencies.md)
+        - [Node Configuration](./backend/developers-testbed/node-configuration.md)
+        - [Running the node](./backend/developers-testbed/running-the-node.md)
+        - [Setting up the environment](./backend/developers-testbed/setting-up-the-environment.md)
+        - [Setting up the repository](./backend/developers-testbed/setting-up-the-repository.md)
+    - [Global Change Registry](./backend/global-change-registry/README.md)
+        - [GCR Structure](./backend/global-change-registry/gcr-structure.md)
+        - [How is GCR Synced?](./backend/global-change-registry/how-is-gcr-synced.md)
+    - [Internal Mechanisms](./backend/internal-mechanisms/README.md)
+        - [Cross Context Identities](./backend/internal-mechanisms/cross-context-identities.md)
+        - [Network Time Synchronization](./backend/internal-mechanisms/network-time-synchronization.md)
+    - [L2PS (Subnet) Framework](./backend/l2ps-subnet-framework/README.md)
+        - [How are L2PS transactions handled?](./backend/l2ps-subnet-framework/how-are-l2ps-transactions-handled.md)
+    - [MCP Server](./backend/mcp-server/README.md)
+        - [Architecture](./backend/mcp-server/architecture.md)
+        - [Available Tools](./backend/mcp-server/available-tools.md)
+        - [Client Usage](./backend/mcp-server/client-usage.md)
+        - [Configuration](./backend/mcp-server/configuration.md)
+        - [Monitoring Endpoint](./backend/mcp-server/monitoring-endpoint.md)
+        - [Overview](./backend/mcp-server/overview.md)
+        - [Troubleshooting](./backend/mcp-server/troubleshooting.md)
+    - [Miscellaneous](./backend/miscellaneous/README.md)
+        - [Backing up and restoring a node](./backend/miscellaneous/backing-up-and-restoring-a-node.md)
+        - [Browsing the Postgres DB via psql](./backend/miscellaneous/browsing-the-postgres-db-via-psql.md)
+        - [Joining the testnet using a custom genesis](./backend/miscellaneous/joining-the-testnet-using-a-custom-genesis.md)
+    - [Storage Programs Overview](./backend/storage-programs/README.md)
+        - [Access Control Guide](./backend/storage-programs/access-control.md)
+        - [Storage Programs API Reference](./backend/storage-programs/api-reference.md)
+        - [Storage Programs Examples](./backend/storage-programs/examples.md)
+        - [Getting Started with Storage Programs](./backend/storage-programs/getting-started.md)
+        - [Storage Program Operations](./backend/storage-programs/operations.md)
+        - [RPC Queries Guide](./backend/storage-programs/rpc-queries.md)
 - [Cookbook](./cookbook/README.md)
-
-# Cookbook / Project-Setup
-
-- [Project setup](./cookbook/project-setup/README.md)
-- [Run the project (MacOS)](./cookbook/project-setup/run-the-project-macos.md)
-- [Run the project (Ubuntu)](./cookbook/project-setup/run-the-project-ubuntu.md)
-
-# Cookbook / Project-Setup / Run-The-Project-Windows
-
-- [Run the project (Windows)](./cookbook/project-setup/run-the-project-windows/README.md)
-- [Issue Troubleshooting](./cookbook/project-setup/run-the-project-windows/issue-troubleshooting.md)
-- [WSL 2 Setup on Windows (10 and 11 only)](./cookbook/project-setup/run-the-project-windows/wsl-2-setup-on-windows-10-and-11-only.md)
-
-# Frontend
-
-- [Demos Providers Discovery Mechanism](./frontend/demos-providers-discovery-mechanism.md)
-
-# Frontend / Demos-Wallet-Provider-Api
-
-- [Demos Wallet Provider API](./frontend/demos-wallet-provider-api/README.md)
-- [Wallet Provider API methods](./frontend/demos-wallet-provider-api/wallet-provider-api-methods.md)
-
-# Introduction
-
-- [Demos Network Architecture](./introduction/demos-network-architecture.md)
-- [What is Demos Network](./introduction/what-is-demos-network.md)
-
-# Sdk
-
-- [Changelog](./sdk/changelog.md)
-- [Demoswork](./sdk/demoswork.md)
-- [Getting Started](./sdk/getting-started.md)
-- [Post Quantum Cryptography](./sdk/post-quantum-cryptography.md)
-- [Utilities](./sdk/utilities.md)
-
-# Sdk / Bridges
-
-- [Bridges](./sdk/bridges/README.md)
-- [Rubic Bridge Test](./sdk/bridges/rubic-bridge-test.md)
-
-# Sdk / Cookbook
-
-- [Cookbook](./sdk/cookbook/README.md)
-- [EVM Contract Write Transactions](./sdk/cookbook/evm-contract-write-transactions.md)
-
-# Sdk / Cookbook / Demoswork
-
-- [Demoswork](./sdk/cookbook/demoswork/README.md)
-- [Base Operation](./sdk/cookbook/demoswork/base-operation.md)
-- [Conditional Operation](./sdk/cookbook/demoswork/conditional-operation.md)
-- [Creating work steps](./sdk/cookbook/demoswork/creating-work-steps.md)
-- [Signing and broadcasting](./sdk/cookbook/demoswork/signing-and-broadcasting.md)
-
-# Sdk / Cookbook / Swap
-
-- [SWAP](./sdk/cookbook/swap/README.md)
-- [Crosschain SWAP](./sdk/cookbook/swap/crosschain-swap.md)
-
-# Sdk / Cookbook / Transactions
-
-- [Transactions](./sdk/cookbook/transactions/README.md)
-- [Crosschain Transaction](./sdk/cookbook/transactions/crosschain-transaction.md)
-- [Native Transactions](./sdk/cookbook/transactions/native-transactions.md)
-
-# Sdk / Cross-Chain
-
-- [Cross Chain](./sdk/cross-chain/README.md)
-- [APTOS](./sdk/cross-chain/aptos.md)
-- [BTC](./sdk/cross-chain/btc.md)
-- [EVM](./sdk/cross-chain/evm.md)
-- [General layout of the XM SDKs](./sdk/cross-chain/general-layout-of-the-xm-sdks.md)
-- [IBC](./sdk/cross-chain/ibc.md)
-- [Identities](./sdk/cross-chain/identities.md)
-- [MultiversX (EGLD)](./sdk/cross-chain/multiversx-egld.md)
-- [NEAR](./sdk/cross-chain/near.md)
-- [Solana](./sdk/cross-chain/solana.md)
-- [TEN](./sdk/cross-chain/ten.md)
-- [The XMScript](./sdk/cross-chain/the-xmscript.md)
-- [TON](./sdk/cross-chain/ton.md)
-- [XRPL](./sdk/cross-chain/xrpl.md)
-
-# Sdk / Web2
-
-- [Web2](./sdk/web2/README.md)
-- [Making Requests](./sdk/web2/making-requests.md)
-- [Quick Start](./sdk/web2/quick-start.md)
-
-# Sdk / Web2 / Dahr-Api-Reference
-
-- [DAHR API Reference](./sdk/web2/dahr-api-reference/README.md)
-- [Types](./sdk/web2/dahr-api-reference/types.md)
-
-# Sdk / Web2 / Identities
-
-- [Identities](./sdk/web2/identities/README.md)
-- [GitHub](./sdk/web2/identities/github.md)
-- [Telegram](./sdk/web2/identities/telegram.md)
-- [Twitter](./sdk/web2/identities/twitter.md)
-
-# Sdk / Websdk
-
-- [WebSDK](./sdk/websdk/README.md)
-- [NodeCalls](./sdk/websdk/nodecalls.md)
-
-# Sdk / Websdk / Authentication
-
-- [Authentication](./sdk/websdk/authentication/README.md)
-
-# Sdk / Websdk / Authentication / Fido2-Passkeys
-
-- [FIDO2 Passkeys](./sdk/websdk/authentication/fido2-passkeys/README.md)
-- [Under the Hood: FIDO2 Passkeys](./sdk/websdk/authentication/fido2-passkeys/under-the-hood-fido2-passkeys.md)
-
-# Sdk / Websdk / Instant-Messaging
-
-- [Instant Messaging](./sdk/websdk/instant-messaging/README.md)
-- [API Reference](./sdk/websdk/instant-messaging/api-reference.md)
-- [Architecture Overview](./sdk/websdk/instant-messaging/architecture-overview.md)
-- [Encryption](./sdk/websdk/instant-messaging/encryption.md)
-- [FAQ](./sdk/websdk/instant-messaging/faq.md)
-- [Message Types](./sdk/websdk/instant-messaging/message-types.md)
-- [Quickstart](./sdk/websdk/instant-messaging/quickstart.md)
-- [What is the Instant Messaging Protocol?](./sdk/websdk/instant-messaging/what-is-the-instant-messaging-protocol.md)
-
-# Sdk / Websdk / L2Ps-Sdk
-
-- [L2PS SDK](./sdk/websdk/l2ps-sdk/README.md)
-- [Interacting with the L2PS](./sdk/websdk/l2ps-sdk/interacting-with-the-l2ps.md)
-- [L2PS Messaging System](./sdk/websdk/l2ps-sdk/l2ps-messaging-system.md)
-- [The l2ps module](./sdk/websdk/l2ps-sdk/the-l2ps-module.md)
-
-# Sdk / Websdk / Transactions
-
-- [Transactions](./sdk/websdk/transactions/README.md)
-- [Broadcasting a transaction](./sdk/websdk/transactions/broadcasting-a-transaction.md)
-- [Creating a transaction](./sdk/websdk/transactions/creating-a-transaction.md)
-- [Signing a transaction](./sdk/websdk/transactions/signing-a-transaction.md)
+    - [Project setup](./cookbook/project-setup/README.md)
+        - [Run the project (MacOS)](./cookbook/project-setup/run-the-project-macos.md)
+        - [Run the project (Ubuntu)](./cookbook/project-setup/run-the-project-ubuntu.md)
+        - [Run the project (Windows)](./cookbook/project-setup/run-the-project-windows/README.md)
+            - [Issue Troubleshooting](./cookbook/project-setup/run-the-project-windows/issue-troubleshooting.md)
+            - [WSL 2 Setup on Windows (10 and 11 only)](./cookbook/project-setup/run-the-project-windows/wsl-2-setup-on-windows-10-and-11-only.md)
+- Frontend
+    - [Demos Providers Discovery Mechanism](./frontend/demos-providers-discovery-mechanism.md)
+    - [Demos Wallet Provider API](./frontend/demos-wallet-provider-api/README.md)
+        - [Wallet Provider API methods](./frontend/demos-wallet-provider-api/wallet-provider-api-methods.md)
+- Introduction
+    - [Demos Network Architecture](./introduction/demos-network-architecture.md)
+    - [What is Demos Network](./introduction/what-is-demos-network.md)
+- Sdk
+    - [Changelog](./sdk/changelog.md)
+    - [Demoswork](./sdk/demoswork.md)
+    - [Getting Started](./sdk/getting-started.md)
+    - [Post Quantum Cryptography](./sdk/post-quantum-cryptography.md)
+    - [Utilities](./sdk/utilities.md)
+    - [Bridges](./sdk/bridges/README.md)
+        - [Rubic Bridge Test](./sdk/bridges/rubic-bridge-test.md)
+    - [Cookbook](./sdk/cookbook/README.md)
+        - [EVM Contract Write Transactions](./sdk/cookbook/evm-contract-write-transactions.md)
+        - [Demoswork](./sdk/cookbook/demoswork/README.md)
+            - [Base Operation](./sdk/cookbook/demoswork/base-operation.md)
+            - [Conditional Operation](./sdk/cookbook/demoswork/conditional-operation.md)
+            - [Creating work steps](./sdk/cookbook/demoswork/creating-work-steps.md)
+            - [Signing and broadcasting](./sdk/cookbook/demoswork/signing-and-broadcasting.md)
+        - [SWAP](./sdk/cookbook/swap/README.md)
+            - [Crosschain SWAP](./sdk/cookbook/swap/crosschain-swap.md)
+        - [Transactions](./sdk/cookbook/transactions/README.md)
+            - [Crosschain Transaction](./sdk/cookbook/transactions/crosschain-transaction.md)
+            - [Native Transactions](./sdk/cookbook/transactions/native-transactions.md)
+    - [Cross Chain](./sdk/cross-chain/README.md)
+        - [APTOS](./sdk/cross-chain/aptos.md)
+        - [BTC](./sdk/cross-chain/btc.md)
+        - [EVM](./sdk/cross-chain/evm.md)
+        - [General layout of the XM SDKs](./sdk/cross-chain/general-layout-of-the-xm-sdks.md)
+        - [IBC](./sdk/cross-chain/ibc.md)
+        - [Identities](./sdk/cross-chain/identities.md)
+        - [MultiversX (EGLD)](./sdk/cross-chain/multiversx-egld.md)
+        - [NEAR](./sdk/cross-chain/near.md)
+        - [Solana](./sdk/cross-chain/solana.md)
+        - [TEN](./sdk/cross-chain/ten.md)
+        - [The XMScript](./sdk/cross-chain/the-xmscript.md)
+        - [TON](./sdk/cross-chain/ton.md)
+        - [XRPL](./sdk/cross-chain/xrpl.md)
+    - [Web2](./sdk/web2/README.md)
+        - [Making Requests](./sdk/web2/making-requests.md)
+        - [Quick Start](./sdk/web2/quick-start.md)
+        - [DAHR API Reference](./sdk/web2/dahr-api-reference/README.md)
+            - [Types](./sdk/web2/dahr-api-reference/types.md)
+        - [Identities](./sdk/web2/identities/README.md)
+            - [GitHub](./sdk/web2/identities/github.md)
+            - [Telegram](./sdk/web2/identities/telegram.md)
+            - [Twitter](./sdk/web2/identities/twitter.md)
+    - [WebSDK](./sdk/websdk/README.md)
+        - [NodeCalls](./sdk/websdk/nodecalls.md)
+        - [Authentication](./sdk/websdk/authentication/README.md)
+            - [FIDO2 Passkeys](./sdk/websdk/authentication/fido2-passkeys/README.md)
+                - [Under the Hood: FIDO2 Passkeys](./sdk/websdk/authentication/fido2-passkeys/under-the-hood-fido2-passkeys.md)
+        - [Instant Messaging](./sdk/websdk/instant-messaging/README.md)
+            - [API Reference](./sdk/websdk/instant-messaging/api-reference.md)
+            - [Architecture Overview](./sdk/websdk/instant-messaging/architecture-overview.md)
+            - [Encryption](./sdk/websdk/instant-messaging/encryption.md)
+            - [FAQ](./sdk/websdk/instant-messaging/faq.md)
+            - [Message Types](./sdk/websdk/instant-messaging/message-types.md)
+            - [Quickstart](./sdk/websdk/instant-messaging/quickstart.md)
+            - [What is the Instant Messaging Protocol?](./sdk/websdk/instant-messaging/what-is-the-instant-messaging-protocol.md)
+        - [L2PS SDK](./sdk/websdk/l2ps-sdk/README.md)
+            - [Interacting with the L2PS](./sdk/websdk/l2ps-sdk/interacting-with-the-l2ps.md)
+            - [L2PS Messaging System](./sdk/websdk/l2ps-sdk/l2ps-messaging-system.md)
+            - [The l2ps module](./sdk/websdk/l2ps-sdk/the-l2ps-module.md)
+        - [Transactions](./sdk/websdk/transactions/README.md)
+            - [Broadcasting a transaction](./sdk/websdk/transactions/broadcasting-a-transaction.md)
+            - [Creating a transaction](./sdk/websdk/transactions/creating-a-transaction.md)
+            - [Signing a transaction](./sdk/websdk/transactions/signing-a-transaction.md)
