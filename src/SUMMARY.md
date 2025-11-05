@@ -217,7 +217,3 @@
 - [Broadcasting a transaction](./sdk/websdk/transactions/broadcasting-a-transaction.md)
 - [Creating a transaction](./sdk/websdk/transactions/creating-a-transaction.md)
 - [Signing a transaction](./sdk/websdk/transactions/signing-a-transaction.md)
-
-# Test
-
-- [Readme](./test/README.md)
