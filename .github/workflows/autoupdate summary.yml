@@ -2,9 +2,7 @@ name: Auto-update SUMMARY.md
 
 on:
   push:
-    paths:
-      - 'src/**/*.md'
-      - '!src/SUMMARY.md'
+      branches: [main]
   workflow_dispatch:
 
 jobs:
