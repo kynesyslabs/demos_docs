@@ -7,3 +7,8 @@
    
    [build]
    build-dir = "book"  # this matches the artifact path in the action
+
+[output.html]
+default-theme = "light"
+additional-css = ["theme/gitbook.css"]
+additional-js = ["theme/gitbook.js"]
