@@ -2,7 +2,8 @@
 
 The MCP server is integrated into the main node process following the same patterns as the signaling server:
 
-{% code title="Node Integration Pattern" overflow="wrap" lineNumbers="true" %}
+**Node Integration Pattern**
+
 ```typescript
 // From src/index.ts - MCP server startup
 if (indexState.MCP_ENABLED) {
@@ -36,4 +37,4 @@ if (indexState.MCP_ENABLED) {
     }
 }
 ```
-{% endcode %}
+

@@ -48,9 +48,8 @@ For example, to get the latest block on Ethereum:
 const block = await instance.provider.getBlock("latest")
 ```
 
-{% hint style="info" %}
-The shape of the `provider` object is SDK specific. Please find the link to the API reference at the bottom of the specific crosschain SDK documentation page.
-{% endhint %}
+> **Info**
+> The shape of the `provider` object is SDK specific. Please find the link to the API reference at the bottom of the specific crosschain SDK documentation page.
 
 ### Connecting a private key
 
@@ -63,9 +62,8 @@ const wallet = await instance.connectWallet(privateKey)
 
 The `connectWallet` method returns the `wallet` object that holds your private key inside the SDK instance.
 
-{% hint style="info" %}
-The shape of the `wallet` object is SDK specific. Please find the link to the API reference at the bottom of the specific crosschain SDK documentation page.
-{% endhint %}
+> **Info**
+> The shape of the `wallet` object is SDK specific. Please find the link to the API reference at the bottom of the specific crosschain SDK documentation page.
 
 You can now check the public key of your connect wallet.
 
@@ -84,9 +82,8 @@ const signedTx = await instance.prepareTransfer(destination, "0.1")
 
 The `preparePay` method creates a transaction to transfer funds to a destination address. It also signs the transaction using the connected private key. It returns the payload ready to be used in a DEMOS transaction.
 
-{% hint style="info" %}
-The `prepareTransfer` method is an alias of the `preparePay` method.
-{% endhint %}
+> **Info**
+> The `prepareTransfer` method is an alias of the `preparePay` method.
 
 ### Creating multiple transactions
 

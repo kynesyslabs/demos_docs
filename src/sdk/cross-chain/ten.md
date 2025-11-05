@@ -5,6 +5,5 @@ icon: clock-ten
 
 # TEN
 
-{% hint style="info" %}
-Incoming ...!
-{% endhint %}
+> **Info**
+> Incoming ...!

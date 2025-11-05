@@ -38,9 +38,8 @@ await instance.connect(with_reconnect)
 
 The `with_reconnect` parameter is optional and defaults to `true`. It is used to specify whether the SDK should attempt to reconnect to the XRPL if the web socket connection is lost.
 
-{% hint style="warning" %}
-The XRPL SDK uses a web socket connection. HTTP RPCs are not supported.
-{% endhint %}
+> **Warning**
+> The XRPL SDK uses a web socket connection. HTTP RPCs are not supported.
 
 ### Connecting your wallet
 

@@ -2,7 +2,8 @@
 
 The node provides a dedicated `/mcp` endpoint to check MCP server status:
 
-{% code title="MCP Status Endpoint" overflow="wrap" lineNumbers="true" %}
+**MCP Status Endpoint**
+
 ```bash
 # Check MCP server status
 curl http://localhost:53550/mcp
@@ -14,4 +15,4 @@ curl http://localhost:53550/mcp
   "status": "running"
 }
 ```
-{% endcode %}
+

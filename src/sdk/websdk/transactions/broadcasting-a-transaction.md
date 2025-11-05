@@ -48,9 +48,8 @@ The information is wrapped in a validity data object, which looks something like
 
 The response is an object containing the status code, the response or an error message if one occured and your transaction. If you are comfortable with the amount of gas to be used (`gas_operation.params.amount`), you can proceed to broadcasting the tx.
 
-{% hint style="info" %}
-Your public key and public key signature are sent along with the request for verification. You need to have your KeyPair connected to the `demos` object.
-{% endhint %}
+> **Info**
+> Your public key and public key signature are sent along with the request for verification. You need to have your KeyPair connected to the `demos` object.
 
 ### Step 2: Broadcasting the validity data
 

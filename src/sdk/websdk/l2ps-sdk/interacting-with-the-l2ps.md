@@ -14,9 +14,8 @@ For this reason, once a Subnet instance is created, it will be able to interact 
 
 All the following methods are to be called from the `L2PS`class instance you created in the previous step (for example: `await instance.getParticipatingNodes()`).
 
-{% hint style="info" %}
-This section mainly explains the primitives to interact with a L2PS Subnet. In the following chapters, we will see more high level modules using this class to expose features in a user-friendly way.
-{% endhint %}
+> **Info**
+> This section mainly explains the primitives to interact with a L2PS Subnet. In the following chapters, we will see more high level modules using this class to expose features in a user-friendly way.
 
 ### getParticipatingNodes
 

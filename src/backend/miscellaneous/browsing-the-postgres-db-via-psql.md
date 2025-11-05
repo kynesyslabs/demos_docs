@@ -10,7 +10,7 @@ sudo /usr/share/postgresql-common/pgdg/apt.postgresql.org.sh
 sudo apt-get install postgresql-client-16
 ```
 
-{% embed url="https://www.postgresql.org/download/linux/debian" %}
+<https://www.postgresql.org/download/linux/debian>
 
 ### Connecting to the db
 
@@ -22,9 +22,8 @@ psql -p 5332 -h localhost demos demosuser
 
 Enter the `demosuser` password as `demospassword` and hit enter.
 
-{% hint style="info" %}
-credentials are defined at: `postgres/docker-compose.yml in the node repo.`
-{% endhint %}
+> **Info**
+> credentials are defined at: `postgres/docker-compose.yml in the node repo.`
 
 You can now list available tables using `\dt` to get started.
 

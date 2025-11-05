@@ -26,9 +26,8 @@ Which will generate the keys for the Subnet and return an instance of it.
 
 To use a pre-existing L2PS, one must first obtain the RSA Private Key for the Subnet. This acts like a certification of participation to the Subnet.
 
-{% hint style="warning" %}
-This private key won't be sent to the node and will remain completely offline for the whole time.
-{% endhint %}
+> **Warning**
+> This private key won't be sent to the node and will remain completely offline for the whole time.
 
 Once obtained, you can create an instance of that L2PS with:
 

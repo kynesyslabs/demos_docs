@@ -6,7 +6,8 @@ The MCP server automatically provides these tools when started with your node:
 
 Monitor the health and status of your Demos Network node:
 
-{% code title="Network Status Example" overflow="wrap" lineNumbers="true" %}
+**Network Status Example**
+
 ```typescript
 // Available network tools:
 // - get_network_status: Get comprehensive network status
@@ -22,13 +23,14 @@ const nodeIdentity = await mcpClient.callTool("get_node_identity", {})
 console.log("Public key:", nodeIdentity.publicKey)
 console.log("Public IP:", nodeIdentity.publicIP)
 ```
-{% endcode %}
+
 
 **Blockchain Query Tools**
 
 Access blockchain data and query block information:
 
-{% code title="Blockchain Tools Example" overflow="wrap" lineNumbers="true" %}
+**Blockchain Tools Example**
+
 ```typescript
 // Available blockchain tools:
 // - get_last_block: Get the most recent block
@@ -48,13 +50,14 @@ console.log("Block 100 details:", specificBlock)
 const chainHeight = await mcpClient.callTool("get_chain_height", {})
 console.log("Current chain height:", chainHeight.height)
 ```
-{% endcode %}
+
 
 **Peer Management Tools**
 
 Monitor and manage network peer connections:
 
-{% code title="Peer Management Example" overflow="wrap" lineNumbers="true" %}
+**Peer Management Example**
+
 ```typescript
 // Available peer tools:
 // - get_peer_list: Get detailed list of connected peers
@@ -70,4 +73,4 @@ peerList.peers.forEach(peer => {
 const peerCount = await mcpClient.callTool("get_peer_count", {})
 console.log("Total peers:", peerCount.peerCount)
 ```
-{% endcode %}
+

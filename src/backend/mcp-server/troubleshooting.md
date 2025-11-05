@@ -24,10 +24,11 @@
 
 Enable debug logging for MCP operations:
 
-{% code title="Debug Configuration" overflow="wrap" lineNumbers="true" %}
+**Debug Configuration**
+
 ```bash
 # Add to your .env file
 DEBUG=mcp:*
 MCP_LOG_LEVEL=debug
 ```
-{% endcode %}
+

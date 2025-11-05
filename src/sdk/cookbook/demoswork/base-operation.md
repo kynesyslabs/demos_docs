@@ -35,6 +35,5 @@ You can also pass the work steps and operations to the constructor of the `BaseO
 const base = new BaseOperation(checkBTCPrice, checkEthPrice)
 ```
 
-{% hint style="info" %}
-You can also use operations (eg. conditional operation) and work steps with the `BaseOperation` class.
-{% endhint %}
+> **Info**
+> You can also use operations (eg. conditional operation) and work steps with the `BaseOperation` class.

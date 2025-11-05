@@ -30,9 +30,8 @@ const res = await demos.broadcast(validityData)
 console.log("res:", res)
 ```
 
-{% hint style="warning" %}
-**Important**\
-\
-The execution of a demoscript is not available at the moment as the DemosWork spec is still in development.
-{% endhint %}
+> **Warning**
+> **Important**\
+> \
+> The execution of a demoscript is not available at the moment as the DemosWork spec is still in development.
 

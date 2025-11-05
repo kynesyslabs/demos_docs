@@ -65,13 +65,11 @@ const pubKey = await demos.connectWallet(seed, {
 })
 ```
 
-{% hint style="info" %}
-The process of converting a mnemonic to a keypair is defined at `Cryptography.newFromSeed` (in `@/encryption/Cryptography.ts`).
-{% endhint %}
+> **Info**
+> The process of converting a mnemonic to a keypair is defined at `Cryptography.newFromSeed` (in `@/encryption/Cryptography.ts`).
 
-{% hint style="info" %}
-You can get the address of the connected wallet using the `demos.getAddress()` method.
-{% endhint %}
+> **Info**
+> You can get the address of the connected wallet using the `demos.getAddress()` method.
 
 With the wallet connected, you can now send authenticated requests to the node.
 
@@ -87,9 +85,8 @@ Once you're done, you can reset the demos object.
 demos.disconnect()
 ```
 
-{% hint style="warning" %}
-Calling `demos.disconnect` won't log out the `DemosWebAuth` instance. You need to call `identity.logout()` to reset that.
-{% endhint %}
+> **Warning**
+> Calling `demos.disconnect` won't log out the `DemosWebAuth` instance. You need to call `identity.logout()` to reset that.
 
 
 
@@ -113,9 +110,8 @@ DemosTransactions.sign(raw_tx: Transaction)
 DemosTransactions.sign(raw_tx: Transaction, keypair: IKeyPair)
 ```
 
-{% hint style="info" %}
-You can use the keypair connected to the demos object with `DemosTransactions.sign` you can call `demos.tx.sign(tx)` instead.
-{% endhint %}
+> **Info**
+> You can use the keypair connected to the demos object with `DemosTransactions.sign` you can call `demos.tx.sign(tx)` instead.
 
 #### 2. prepareWeb2Payload
 
@@ -140,9 +136,8 @@ prepareWeb2Payload(
 )
 ```
 
-{% hint style="info" %}
-To use the keypair connected to the demos object with `prepareWeb2Payload`, you can call `demos.web2.preparePayload(params)` instead.
-{% endhint %}
+> **Info**
+> To use the keypair connected to the demos object with `prepareWeb2Payload`, you can call `demos.web2.preparePayload(params)` instead.
 
 #### 3. prepareXMPayload
 
@@ -156,9 +151,8 @@ prepareXMPayload(xm_payload: XMScript)
 prepareXMPayload(xm_payload: XMScript, keypair: IKeyPair)
 ```
 
-{% hint style="info" %}
-To use the keypair connected to the demos object with `prepareXMPayload`, you can call `demos.xm.preparePayload(xm_payload)` instead.
-{% endhint %}
+> **Info**
+> To use the keypair connected to the demos object with `prepareXMPayload`, you can call `demos.xm.preparePayload(xm_payload)` instead.
 
 #### 4. Wallet.transfer
 

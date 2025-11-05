@@ -35,9 +35,8 @@ const tx = await demos.transfer(
 
 The transcation returned by `demos.transfer` is signed using the wallet connected to the `demos` object.
 
-{% hint style="info" %}
-`demos.transfer` is an alias to `demos.pay`
-{% endhint %}
+> **Info**
+> `demos.transfer` is an alias to `demos.pay`
 
 ### 3. Broadcasting the transaction
 

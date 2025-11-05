@@ -8,15 +8,13 @@ icon: fingerprint
 
 You can associate a crosschain identity with a DEMOS address by creating a signature using your private key and sending it to the DEMOS network.
 
-{% hint style="info" %}
-DEMOS network supports linking Web2 identities too (for example, login with Twitter or with Github).\
-\
-See web2 [identities](../web2/identities/ "mention")
-{% endhint %}
+> **Info**
+> DEMOS network supports linking Web2 identities too (for example, login with Twitter or with Github).\
+> \
+> See web2 [identities](../web2/identities/ "mention")
 
-{% hint style="info" %}
-Check out how to create a signature on the "**Signing Messages**" section of the respective crosschain SDK documentation. eg. [EVM](evm.md#signing-messages)
-{% endhint %}
+> **Info**
+> Check out how to create a signature on the "**Signing Messages**" section of the respective crosschain SDK documentation. eg. [EVM](evm.md#signing-messages)
 
 #### 0. Imports
 
@@ -37,9 +35,8 @@ const message = `Link ${instance.name} address ${address} to Demos`
 const signature = await instance.signMessage(message)
 ```
 
-{% hint style="info" %}
-The signature will be verified on the network to prevent adding identities not owned by you
-{% endhint %}
+> **Info**
+> The signature will be verified on the network to prevent adding identities not owned by you
 
 #### 2. Creating the DEMOS payload
 

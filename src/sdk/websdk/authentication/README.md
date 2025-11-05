@@ -26,11 +26,10 @@ const publicKey = await demos.connectWallet(mnemonic, {
 console.log("public key: ", publicKey)
 ```
 
-{% hint style="info" %}
-The `demos.connectWallet` method accepts either a mnemonic or a 128 byte seed buffer.\
-&#x20;\
-If you provide any other buffer or string, it will be hashed using SHA-512 to get a 128 byte seed buffer which will be used as the master seed.
-{% endhint %}
+> **Info**
+> The `demos.connectWallet` method accepts either a mnemonic or a 128 byte seed buffer.\
+> &#x20;\
+> If you provide any other buffer or string, it will be hashed using SHA-512 to get a 128 byte seed buffer which will be used as the master seed.
 
 \
 The `demos.connectWallet` method accepts two fields for the `options` parameter
@@ -139,4 +138,4 @@ demos.disconnect()
 
 ### API Reference
 
-{% embed url="https://kynesyslabs.github.io/demosdk-api-ref/classes/websdk.DemosWebAuth.html" %}
+<https://kynesyslabs.github.io/demosdk-api-ref/classes/websdk.DemosWebAuth.html>

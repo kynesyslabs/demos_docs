@@ -16,9 +16,8 @@ Then update `demos_peerlist.json` to locate the remote peer:
 }
 ```
 
-{% hint style="info" %}
-You can get the remote peer's public key by going to `/info` .eg. [https://demosnode.discus.sh/info](https://demosnode.discus.sh/info).
-{% endhint %}
+> **Info**
+> You can get the remote peer's public key by going to `/info` .eg. [https://demosnode.discus.sh/info](https://demosnode.discus.sh/info).
 
 Finally, run the node with the `-c true` flag to delete the database:
 

@@ -94,9 +94,8 @@ The `critical` property is used to stop the execution of the `DemoScript` if a s
 
 The operation class indexes the steps and operations it contains in the `steps` and `operations` fields. The `operationScript` field is specific to the operation type and is copied into the main script when the operation is added to the work instance.
 
-{% hint style="info" %}
-The `addWork` method is used to add steps and operations to the operation (where applicable). If the work passed is an operation, its steps and operations are copied into the current operation.
-{% endhint %}
+> **Info**
+> The `addWork` method is used to add steps and operations to the operation (where applicable). If the work passed is an operation, its steps and operations are copied into the current operation.
 
 ### Conditional Operation
 

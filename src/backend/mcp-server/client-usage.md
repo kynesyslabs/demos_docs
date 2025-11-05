@@ -6,7 +6,8 @@
 
 The node starts the MCP server with SSE transport by default, making it accessible remotely:
 
-{% code title="MCP Server Connection" overflow="wrap" lineNumbers="true" %}
+**MCP Server Connection**
+
 ```typescript
 // Connect to your running Demos Network node's MCP server
 const serverUrl = "http://localhost:3001"  // Use your node's MCP port
@@ -15,13 +16,14 @@ const serverUrl = "http://localhost:3001"  // Use your node's MCP port
 // SSE endpoint: http://localhost:3001/sse
 // Message endpoint: POST http://localhost:3001/message
 ```
-{% endcode %}
+
 
 #### Local Access (stdio Transport)
 
 For local development, you can also create a separate stdio MCP server:
 
-{% code title="Local MCP Development" overflow="wrap" lineNumbers="true" %}
+**Local MCP Development**
+
 ```typescript
 import { createDemosMCPServer, createDemosNetworkTools } from "@/features/mcp"
 
@@ -35,4 +37,4 @@ tools.forEach(tool => devServer.registerTool(tool))
 
 await devServer.start()
 ```
-{% endcode %}
+
