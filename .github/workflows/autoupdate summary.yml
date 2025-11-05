@@ -1,119 +1,144 @@
-- name: Generate SUMMARY.md
-  run: |
-    cat > generate-summary.py << 'EOF'
-    import os
-    import re
-    from pathlib import Path
-    
-    def get_title(filepath):
-        """Extract title from markdown file"""
-        with open(filepath, 'r') as f:
-            content = f.read()
-            # Try to find # Title
-            match = re.search(r'^#\s+(.+)$', content, re.MULTILINE)
-            if match:
-                return match.group(1)
-            # Fallback to filename
-            return Path(filepath).stem.replace('-', ' ').replace('_', ' ').title()
-    
-    def scan_directory(base_path='src'):
-        """Build directory structure"""
-        structure = {}
-        
-        for root, dirs, files in os.walk(base_path):
-            # Skip hidden directories
-            dirs[:] = [d for d in dirs if not d.startswith('.')]
-            
-            rel_path = Path(root).relative_to(base_path)
-            level = len(rel_path.parts)
-            
-            for file in sorted(files):
-                if file == 'SUMMARY.md' or not file.endswith('.md'):
-                    continue
-                
-                filepath = Path(root) / file
-                rel_filepath = filepath.relative_to(base_path)
-                
-                # Special handling for README.md files
-                if file.lower() == 'readme.md':
-                    if level == 0:
-                        # Root README
-                        if '_root' not in structure:
-                            structure['_root'] = {'files': []}
-                        structure['_root']['readme'] = {
-                            'title': get_title(filepath),
-                            'path': str(rel_filepath)
-                        }
-                    else:
-                        # Section README - use as section intro
-                        section = str(rel_path)
-                        if section not in structure:
-                            structure[section] = {'files': []}
-                        structure[section]['readme'] = {
-                            'title': get_title(filepath),
-                            'path': str(rel_filepath)
-                        }
-                else:
-                    section = str(rel_path) if level > 0 else '_root'
-                    if section not in structure:
-                        structure[section] = {'files': []}
-                    structure[section]['files'].append({
-                        'title': get_title(filepath),
-                        'path': str(rel_filepath)
-                    })
-        
-        return structure
-    
-    def generate_summary(structure):
-        """Generate SUMMARY.md content"""
-        lines = ["# Summary\n\n"]
-        
-        # Add root-level content first
-        if '_root' in structure:
-            root_content = structure['_root']
-            if 'readme' in root_content:
-                lines.append(f"[Introduction](./{root_content['readme']['path']})\n\n")
-            for item in root_content.get('files', []):
-                lines.append(f"- [{item['title']}](./{item['path']})\n")
-        
-        # Add sections
-        for section, content in sorted(structure.items()):
-            if section == '_root':
-                continue
-            
-            # Clean section name for display
-            section_title = section.replace('/', ' / ').title()
-            
-            lines.append(f"\n# {section_title}\n\n")
-            
-            if 'readme' in content:
-                lines.append(f"- [{content['readme']['title']}](./{content['readme']['path']})\n")
-            
-            # Add section files
-            for file in content.get('files', []):
-                lines.append(f"- [{file['title']}](./{file['path']})\n")
-        
-        return ''.join(lines)
-    
-    # Generate and save
-    structure = scan_directory()
-    summary_content = generate_summary(structure)
-    
-    # Preserve any manual sections if they exist
-    summary_path = 'src/SUMMARY.md'
-    if os.path.exists(summary_path):
-        with open(summary_path, 'r') as f:
-            existing = f.read()
-            # Look for a manual section marker
-            if '<!-- manual -->' in existing:
-                # Preserve everything after the marker
-                manual_section = existing.split('<!-- manual -->')[1]
-                summary_content += '\n<!-- manual -->' + manual_section
-    
-    with open(summary_path, 'w') as f:
-        f.write(summary_content)
-    
-    print("SUMMARY.md updated successfully!")
-    EOF
-    
-    python generate-summary.py
+name: Auto-update SUMMARY.md
+
+on:
+  push:
+    paths:
+      - 'src/**/*.md'
+      - '!src/SUMMARY.md'
+  workflow_dispatch:
+
+jobs:
+  update-summary:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Generate SUMMARY.md
+        run: python generate-summary.py
+      
+      - name: Create generator script
+        run: |
+          cat > generate-summary.py << 'SCRIPT_END'
+          import os
+          import re
+          from pathlib import Path
+          
+          def get_title(filepath):
+              """Extract title from markdown file"""
+              with open(filepath, 'r') as f:
+                  content = f.read()
+                  match = re.search(r'^#\s+(.+)$', content, re.MULTILINE)
+                  if match:
+                      return match.group(1)
+                  return Path(filepath).stem.replace('-', ' ').replace('_', ' ').title()
+          
+          def scan_directory(base_path='src'):
+              """Build directory structure"""
+              structure = {}
+              
+              for root, dirs, files in os.walk(base_path):
+                  dirs[:] = [d for d in dirs if not d.startswith('.')]
+                  rel_path = Path(root).relative_to(base_path)
+                  level = len(rel_path.parts)
+                  
+                  for file in sorted(files):
+                      if file == 'SUMMARY.md' or not file.endswith('.md'):
+                          continue
+                      
+                      filepath = Path(root) / file
+                      rel_filepath = filepath.relative_to(base_path)
+                      
+                      if file.lower() == 'readme.md':
+                          if level == 0:
+                              if '_root' not in structure:
+                                  structure['_root'] = {'files': []}
+                              structure['_root']['readme'] = {
+                                  'title': get_title(filepath),
+                                  'path': str(rel_filepath)
+                              }
+                          else:
+                              section = str(rel_path)
+                              if section not in structure:
+                                  structure[section] = {'files': []}
+                              structure[section]['readme'] = {
+                                  'title': get_title(filepath),
+                                  'path': str(rel_filepath)
+                              }
+                      else:
+                          section = str(rel_path) if level > 0 else '_root'
+                          if section not in structure:
+                              structure[section] = {'files': []}
+                          structure[section]['files'].append({
+                              'title': get_title(filepath),
+                              'path': str(rel_filepath)
+                          })
+              
+              return structure
+          
+          def generate_summary(structure):
+              """Generate SUMMARY.md content"""
+              lines = ["# Summary\n\n"]
+              
+              if '_root' in structure:
+                  root_content = structure['_root']
+                  if 'readme' in root_content:
+                      lines.append(f"[Introduction](./{root_content['readme']['path']})\n\n")
+                  for item in root_content.get('files', []):
+                      lines.append(f"- [{item['title']}](./{item['path']})\n")
+              
+              for section, content in sorted(structure.items()):
+                  if section == '_root':
+                      continue
+                  
+                  section_title = section.replace('/', ' / ').title()
+                  lines.append(f"\n# {section_title}\n\n")
+                  
+                  if 'readme' in content:
+                      lines.append(f"- [{content['readme']['title']}](./{content['readme']['path']})\n")
+                  
+                  for file in content.get('files', []):
+                      lines.append(f"- [{file['title']}](./{file['path']})\n")
+              
+              return ''.join(lines)
+          
+          structure = scan_directory()
+          summary_content = generate_summary(structure)
+          
+          summary_path = 'src/SUMMARY.md'
+          if os.path.exists(summary_path):
+              with open(summary_path, 'r') as f:
+                  existing = f.read()
+                  if '<!-- manual -->' in existing:
+                      manual_section = existing.split('<!-- manual -->')[1]
+                      summary_content += '\n<!-- manual -->' + manual_section
+          
+          with open(summary_path, 'w') as f:
+              f.write(summary_content)
+          
+          print("SUMMARY.md updated successfully!")
+          SCRIPT_END
+      
+      - name: Run generator
+        run: python generate-summary.py
+      
+      - name: Check for changes
+        id: verify
+        run: |
+          if [[ -n $(git status -s src/SUMMARY.md) ]]; then
+            echo "changes=true" >> $GITHUB_OUTPUT
+          else
+            echo "changes=false" >> $GITHUB_OUTPUT
+          fi
+      
+      - name: Commit and push
+        if: steps.verify.outputs.changes == 'true'
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email github-actions[bot]@users.noreply.github.com
+          git add src/SUMMARY.md
+          git commit -m "Auto-update SUMMARY.md"
+          git push
