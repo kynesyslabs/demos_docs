@@ -18,9 +18,6 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
       
       - name: Generate SUMMARY.md
-        run: python generate-summary.py
-      
-      - name: Create generator script
         run: |
           cat > generate-summary.py << 'SCRIPT_END'
           import os
@@ -121,9 +118,8 @@ jobs:
           
           print("SUMMARY.md updated successfully!")
           SCRIPT_END
-      
-      - name: Run generator
-        run: python generate-summary.py
+          
+          python generate-summary.py
       
       - name: Check for changes
         id: verify
